@@ -1,0 +1,44 @@
+2025-12-14 00:16:06.226 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-12-14 00:16:06.431 +02:00 [INF] User profile is available. Using 'C:\Users\adroz\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-14 00:16:06.656 +02:00 [INF] Now listening on: https://localhost:7228
+2025-12-14 00:16:06.657 +02:00 [INF] Now listening on: http://localhost:5281
+2025-12-14 00:16:06.753 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-14 00:16:06.754 +02:00 [INF] Hosting environment: Development
+2025-12-14 00:16:06.755 +02:00 [INF] Content root path: A:\VisualStudioProject\Notes\Notes.back\Notes.WebApi
+2025-12-14 00:16:07.696 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/ - null null
+2025-12-14 00:16:07.835 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/ - 301 0 null 145.0923ms
+2025-12-14 00:16:07.842 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/index.html - null null
+2025-12-14 00:16:07.912 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/index.html - 200 null text/html;charset=utf-8 69.4543ms
+2025-12-14 00:16:07.929 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/swagger-ui.css - null null
+2025-12-14 00:16:07.932 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/index.css - null null
+2025-12-14 00:16:07.932 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/swagger-ui-bundle.js - null null
+2025-12-14 00:16:07.957 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/index.css - 200 202 text/css 25.0758ms
+2025-12-14 00:16:07.959 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/swagger-ui-standalone-preset.js - null null
+2025-12-14 00:16:08.004 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/swagger-ui.css - 200 155175 text/css 75.0579ms
+2025-12-14 00:16:08.004 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/swagger-ui-standalone-preset.js - 200 229223 text/javascript 44.3541ms
+2025-12-14 00:16:08.016 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/swagger-ui-bundle.js - 200 1485750 text/javascript 83.7599ms
+2025-12-14 00:16:08.086 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-14 00:16:08.086 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/index.js - null null
+2025-12-14 00:16:08.093 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/_vs/browserLink - null null
+2025-12-14 00:16:08.093 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/index.js - 200 null application/javascript;charset=utf-8 7.5151ms
+2025-12-14 00:16:08.094 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 8.2943ms
+2025-12-14 00:16:08.158 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.7032ms
+2025-12-14 00:16:08.236 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/swagger/v1/swagger.json - null null
+2025-12-14 00:16:08.250 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/favicon-32x32.png - null null
+2025-12-14 00:16:08.251 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.5095ms
+2025-12-14 00:16:08.253 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/favicon-32x32.png - 200 628 image/png 3.0089ms
+2025-12-14 00:16:22.540 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-12-14 00:16:22.731 +02:00 [INF] User profile is available. Using 'C:\Users\adroz\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-14 00:16:22.912 +02:00 [INF] Now listening on: https://localhost:7228
+2025-12-14 00:16:22.913 +02:00 [INF] Now listening on: http://localhost:5281
+2025-12-14 00:16:22.997 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-14 00:16:22.998 +02:00 [INF] Hosting environment: Development
+2025-12-14 00:16:22.999 +02:00 [INF] Content root path: A:\VisualStudioProject\Notes\Notes.back\Notes.WebApi
+2025-12-14 00:16:23.797 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/_vs/browserLink - null null
+2025-12-14 00:16:23.797 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-14 00:16:23.822 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 31.3917ms
+2025-12-14 00:16:23.860 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.7834ms
+2025-12-14 00:16:23.969 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7228/swagger/v1/swagger.json - null null
+2025-12-14 00:16:24.002 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7228/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.7988ms

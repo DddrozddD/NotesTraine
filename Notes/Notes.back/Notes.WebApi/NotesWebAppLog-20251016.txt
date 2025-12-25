@@ -1,0 +1,32 @@
+2025-10-16 21:48:04.608 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-10-16 21:48:05.022 +03:00 [INF] User profile is available. Using 'C:\Users\adroz\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-16 21:48:05.176 +03:00 [INF] Creating key {601aecd3-51b1-4bcc-9e4b-2adf21002044} with creation date 2025-10-16 18:48:05Z, activation date 2025-10-18 17:48:45Z, and expiration date 2026-01-14 18:48:05Z.
+2025-10-16 21:48:05.194 +03:00 [INF] Writing data to file 'C:\Users\adroz\AppData\Local\ASP.NET\DataProtection-Keys\key-601aecd3-51b1-4bcc-9e4b-2adf21002044.xml'.
+2025-10-16 21:48:05.610 +03:00 [INF] Now listening on: https://localhost:7228
+2025-10-16 21:48:05.612 +03:00 [INF] Now listening on: http://localhost:5281
+2025-10-16 21:48:05.618 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-16 21:48:05.620 +03:00 [INF] Hosting environment: Development
+2025-10-16 21:48:05.622 +03:00 [INF] Content root path: A:\VisualStudioProject\Notes\Notes.back\Notes.WebApi
+2025-10-16 21:48:10.545 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/ - null null
+2025-10-16 21:48:10.891 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/ - 301 0 null 360.8075ms
+2025-10-16 21:48:10.915 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/index.html - null null
+2025-10-16 21:48:11.118 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/index.html - 200 null text/html;charset=utf-8 204.0799ms
+2025-10-16 21:48:11.129 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/index.css - null null
+2025-10-16 21:48:11.130 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/index.js - null null
+2025-10-16 21:48:11.134 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-16 21:48:11.167 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/index.js - 200 null application/javascript;charset=utf-8 37.2639ms
+2025-10-16 21:48:11.141 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/_vs/browserLink - null null
+2025-10-16 21:48:11.130 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/swagger-ui-bundle.js - null null
+2025-10-16 21:48:11.129 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/swagger-ui.css - null null
+2025-10-16 21:48:11.130 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/swagger-ui-standalone-preset.js - null null
+2025-10-16 21:48:11.222 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/index.css - 200 202 text/css 93.0226ms
+2025-10-16 21:48:11.209 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 74.5225ms
+2025-10-16 21:48:11.241 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/swagger-ui.css - 200 155175 text/css 111.2506ms
+2025-10-16 21:48:11.253 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/swagger-ui-standalone-preset.js - 200 229223 text/javascript 122.4641ms
+2025-10-16 21:48:11.283 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/swagger-ui-bundle.js - 200 1485750 text/javascript 153.5354ms
+2025-10-16 21:48:11.340 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/_vs/browserLink - 200 null text/javascript; charset=UTF-8 199.5536ms
+2025-10-16 21:48:11.655 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/swagger/v1/swagger.json - null null
+2025-10-16 21:48:11.713 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/favicon-32x32.png - null null
+2025-10-16 21:48:11.741 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/favicon-32x32.png - 200 628 image/png 28.3351ms
+2025-10-16 21:48:11.985 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 330.356ms

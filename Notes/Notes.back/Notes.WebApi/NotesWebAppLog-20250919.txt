@@ -1,0 +1,271 @@
+2025-09-19 20:50:53.299 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-09-19 20:50:53.476 +03:00 [INF] User profile is available. Using 'C:\Users\adroz\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-19 20:50:53.687 +03:00 [INF] Now listening on: https://localhost:7228
+2025-09-19 20:50:53.688 +03:00 [INF] Now listening on: http://localhost:5281
+2025-09-19 20:50:53.691 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 20:50:53.693 +03:00 [INF] Hosting environment: Development
+2025-09-19 20:50:53.694 +03:00 [INF] Content root path: A:\VisualStudioProject\Notes\Notes.back\Notes.WebApi
+2025-09-19 20:50:54.081 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/_vs/browserLink - null null
+2025-09-19 20:50:54.081 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 20:50:54.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 34.8304ms
+2025-09-19 20:50:54.144 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.5535ms
+2025-09-19 20:50:54.177 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/swagger/v1/swagger.json - null null
+2025-09-19 20:50:54.308 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.0527ms
+2025-09-19 20:50:58.277 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:50:58.304 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:50:58.306 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 28.9681ms
+2025-09-19 20:50:58.307 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7228/api/1.0/Note - application/json 19
+2025-09-19 20:50:58.313 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:50:58.480 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2025-09-19 20:50:58.500 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:50:58.821 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 15), @p3='?' (DbType = DateTime), @p4='?' (Size = 7), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("Id", "CreationDate", "Details", "EditDate", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-19 20:50:58.837 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2025-09-19 20:50:58.847 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 343.8036ms
+2025-09-19 20:50:58.848 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2025-09-19 20:50:58.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:50:58.853 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 545.2041ms
+2025-09-19 20:50:58.855 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:50:58.860 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:50:58.864 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:50:59.094 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:50:59.098 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:50:59.111 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 245.9481ms
+2025-09-19 20:50:59.112 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:50:59.113 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 261.1358ms
+2025-09-19 20:51:25.333 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:51:25.336 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:51:25.337 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 4.0591ms
+2025-09-19 20:51:25.339 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7228/api/1.0/Note - application/json 18
+2025-09-19 20:51:25.342 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:51:25.347 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2025-09-19 20:51:25.348 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:51:25.358 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 15), @p3='?' (DbType = DateTime), @p4='?' (Size = 6), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("Id", "CreationDate", "Details", "EditDate", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-19 20:51:25.360 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2025-09-19 20:51:25.361 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 12.1034ms
+2025-09-19 20:51:25.362 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2025-09-19 20:51:25.363 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 24.7925ms
+2025-09-19 20:51:25.365 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:51:25.368 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:51:25.369 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:51:25.370 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:51:25.377 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:51:25.379 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:51:25.380 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 8.3241ms
+2025-09-19 20:51:25.381 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:51:25.382 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 17.2882ms
+2025-09-19 20:53:55.087 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:53:55.087 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:53:55.096 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:53:55.098 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:53:55.099 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 12.4599ms
+2025-09-19 20:53:55.101 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 12.6634ms
+2025-09-19 20:53:55.113 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:53:55.121 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:53:55.122 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:53:55.123 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:53:55.130 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:53:55.132 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:53:55.133 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 7.9469ms
+2025-09-19 20:53:55.135 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:53:55.135 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:53:55.137 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:53:55.138 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 24.9246ms
+2025-09-19 20:53:55.139 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:53:55.142 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:53:55.145 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:53:55.147 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:53:55.148 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 4.9944ms
+2025-09-19 20:53:55.150 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:53:55.150 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 15.882ms
+2025-09-19 20:54:06.135 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:06.135 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:06.137 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:06.140 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:06.141 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 6.5639ms
+2025-09-19 20:54:06.141 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 7.2588ms
+2025-09-19 20:54:06.147 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:06.150 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:06.151 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:06.152 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:54:06.155 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:54:06.157 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:54:06.159 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 5.123ms
+2025-09-19 20:54:06.160 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:06.160 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:06.162 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 15.3635ms
+2025-09-19 20:54:06.164 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:06.167 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:06.168 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:54:06.172 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:54:06.174 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:54:06.176 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 6.4326ms
+2025-09-19 20:54:06.178 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:06.179 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 18.9659ms
+2025-09-19 20:54:15.146 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:15.146 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:15.149 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:15.151 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:15.152 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 6.0847ms
+2025-09-19 20:54:15.153 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 6.9203ms
+2025-09-19 20:54:15.157 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:15.161 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:15.163 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:15.163 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:54:15.166 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:54:15.168 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:54:15.169 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 4.0748ms
+2025-09-19 20:54:15.170 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:15.170 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:15.171 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 13.9313ms
+2025-09-19 20:54:15.173 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:15.176 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:15.177 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:54:15.180 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:54:15.182 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:54:15.183 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 4.5864ms
+2025-09-19 20:54:15.184 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:15.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 15.207ms
+2025-09-19 20:54:53.196 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:53.196 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:53.202 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:53.204 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:53.205 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 9.1428ms
+2025-09-19 20:54:53.205 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 9.6625ms
+2025-09-19 20:54:53.208 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:53.213 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:53.214 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:53.215 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:54:53.218 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:54:53.220 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:54:53.221 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 4.432ms
+2025-09-19 20:54:53.222 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:53.223 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:54:53.224 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 15.8176ms
+2025-09-19 20:54:53.226 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:54:53.229 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:53.230 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:54:53.233 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:54:53.235 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:54:53.236 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 5.1672ms
+2025-09-19 20:54:53.238 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:54:53.239 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 16.4596ms
+2025-09-19 20:55:24.341 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:55:24.343 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:55:24.348 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:55:24.350 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:55:24.351 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 9.9817ms
+2025-09-19 20:55:24.352 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 9.6857ms
+2025-09-19 20:55:24.354 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:55:24.358 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:55:24.360 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:55:24.361 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:55:24.363 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:55:24.365 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:55:24.366 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 4.274ms
+2025-09-19 20:55:24.367 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:55:24.368 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:55:24.369 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 15.2836ms
+2025-09-19 20:55:24.371 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:55:24.374 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:55:24.375 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:55:24.378 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:55:24.380 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:55:24.382 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 4.4845ms
+2025-09-19 20:55:24.383 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:55:24.384 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 15.8649ms
+2025-09-19 20:56:46.742 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2025-09-19 20:56:46.876 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Notes" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Notes" PRIMARY KEY,
+    "UserId" TEXT NOT NULL,
+    "Title" TEXT NOT NULL,
+    "Details" TEXT NULL,
+    "CreationDate" TEXT NOT NULL,
+    "EditDate" TEXT NULL
+);
+2025-09-19 20:56:46.878 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Notes_Id" ON "Notes" ("Id");
+2025-09-19 20:56:47.019 +03:00 [INF] User profile is available. Using 'C:\Users\adroz\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-19 20:56:47.246 +03:00 [INF] Now listening on: https://localhost:7228
+2025-09-19 20:56:47.247 +03:00 [INF] Now listening on: http://localhost:5281
+2025-09-19 20:56:47.250 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 20:56:47.252 +03:00 [INF] Hosting environment: Development
+2025-09-19 20:56:47.253 +03:00 [INF] Content root path: A:\VisualStudioProject\Notes\Notes.back\Notes.WebApi
+2025-09-19 20:56:47.939 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 20:56:47.939 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/_vs/browserLink - null null
+2025-09-19 20:56:47.973 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 44.1269ms
+2025-09-19 20:56:48.015 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/_vs/browserLink - 200 null text/javascript; charset=UTF-8 87.1277ms
+2025-09-19 20:56:48.164 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/swagger/v1/swagger.json - null null
+2025-09-19 20:56:48.351 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 186.9342ms
+2025-09-19 20:57:02.939 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:57:02.939 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:57:02.977 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:57:02.977 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:57:02.981 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 42.1645ms
+2025-09-19 20:57:02.981 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7228/api/1.0/Note - 204 null null 42.7437ms
+2025-09-19 20:57:02.984 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:57:02.997 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:57:03.268 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:57:03.296 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:57:03.738 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:57:03.756 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:57:03.832 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 531.5088ms
+2025-09-19 20:57:03.834 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:57:03.837 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7228/api/1.0/Note - null null
+2025-09-19 20:57:03.839 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 855.4397ms
+2025-09-19 20:57:03.840 +03:00 [INF] CORS policy execution successful.
+2025-09-19 20:57:03.848 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:57:03.849 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNameList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2025-09-19 20:57:03.905 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2025-09-19 20:57:03.907 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNameList.NoteListVm'.
+2025-09-19 20:57:03.909 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 56.9893ms
+2025-09-19 20:57:03.910 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2025-09-19 20:57:03.911 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7228/api/1.0/Note - 200 null application/json; charset=utf-8 74.1262ms
